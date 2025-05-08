@@ -1,0 +1,69 @@
+Hi there i just to explain whatever i learnt about bubble sort 
+
+arr=[12,23,13,24,14]
+this is a array we want to bubble sort and make it increasing order (bubble sort 
+default) 
+first we are defining a function called bubblesort() in which we are passing array
+calculating the length of arr using len() function and storing it in n
+
+then running two loop one is i and second is j
+i is for n-1 (because at every i loop last one element reach at right place after
+swapping) time and j is for n-i-1 (because if i is for n-1 then j should go n-i-1
+to check second last element)
+
+when we are at internal loop we will check if arr[j]>arr[j+1] then swap it
+arr[j]>arr[j+1]=arr[j+1],aa[j]
+by this manner we'll get out output i will make a table for better understading
+
+arr=[12,23,13,24,14]
+CONDITION-arr[j]>arr[j+1]=arr[j+1],aa[j]
+n=5, 
+i=0,
+j=0, till j=n-i-1=> j=n-0-1=> j=4
+
+| i | j  | j+1 | condition |     output        |
+------------------------------------------------
+| 0 | 12 | 23  | FALSE     | 12,23,13,24,14    |
+------------------------------------------------
+| 0 | 23 | 13  | TRUE      | 12,13,23,24,14    |
+------------------------------------------------
+| 0 | 23 | 24  | FALSE     | 12,13,23,24,14    |
+------------------------------------------------
+| 0 | 24 | 14  | TRUE      | 12,13,23,14,24    |
+------------------------------------------------
+
+
+i=1
+j=0, till j=n-i-1=> j=n-1-1=> j=3
+
+| i | j  | j+1 | condition |     output        |
+------------------------------------------------
+| 1 | 12 | 13  | FALSE     | 12,13,23,14,24    |
+------------------------------------------------
+| 1 | 13 | 23  | FALSE     | 12,13,23,14,24    |
+------------------------------------------------
+| 1 | 23 | 14  | TRUE     | 12,13,14,23,24     |
+------------------------------------------------
+
+
+i=2
+j=0, till j=n-i-1=> j=n-2-1=> j=2
+
+| i | j  | j+1 | condition |     output        |
+------------------------------------------------
+| 2 | 12 | 13  | FALSE     | 12,13,14,23,24    |
+------------------------------------------------
+| 2 | 13 | 14  | FALSE     | 12,13,14,23,24    |
+------------------------------------------------
+
+i=3
+j=0, till j=n-i-1=> j=n-3-1=> j=1
+
+| i | j  | j+1 | condition |     output        |
+------------------------------------------------
+| 3 | 12 | 13  | FALSE     | 12,13,14,23,24    |
+------------------------------------------------
+
+so the output will because 
+
+bubble sort: 12,13,14,23,24
